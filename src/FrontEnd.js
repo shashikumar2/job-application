@@ -94,16 +94,16 @@ class FrontEnd extends React.Component{
                                 <td> {ele.createdAt.slice(0,10)}</td>
                                 <td> { <button onClick={() => {
                                                    this.handleDetails(ele)
-                                                    }}> View Details</button>}</td>
+                                                    }} className="btn btn-primary"> View Details</button>}</td>
                                 <td> 
                                 {(ele.status=="applied") && 
                                     <div>
                                     <button onClick= {() => {
                                         this.handleShortlisted(ele._id)
-                                    }}>Shortlist</button>
+                                    }} className="btn btn-success">Shortlist</button>
                                       <button onClick={()=> {
                                           this.handleRejected(ele._id)
-                                      }}>Reject</button>
+                                      }} className="btn btn-danger">Reject</button>
                                     </div>
 			                       }
 
@@ -112,9 +112,6 @@ class FrontEnd extends React.Component{
 
 
                                    </td>
-
-
-
 
                             </tr>
                        )

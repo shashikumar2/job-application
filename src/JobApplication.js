@@ -28,7 +28,7 @@ class JobApplication extends React.Component{
      axios.post('http://dct-application-form.herokuapp.com/users/application-form', this.state)
      .then(response=>{
       console.log(response.data)
-      this.setState({ redirect:"/Dashboard" })
+      //this.setState({ redirect:"/Dashboard" })
      })
 
      .catch((err)=>{
@@ -40,23 +40,31 @@ class JobApplication extends React.Component{
     
     render(){
         return (
-            <div>
+            <div className= "row">
+                <div className= "col-md-8 offset-md-2">
+
                 <h1> Apply for job</h1>
                 <form onSubmit = {this.handleSubmit}>
+                    <div className="form-group">
                     <label htmlFor= 'name'>Full name</label>   
                     <input type ='text' id ='name' name ='name' value = { this.state.name} onChange= {this.handleChange}/>
                     <br/>
                     <br/>
+                    </div>
 
+                    <div className="form-group">
                     <label htmlFor= 'email'>Email address</label>   
-                    <input type ='text' id ='email' name='email'value = { this.state.email} onChange= {this.handleChange}/>
+                    <input type ='text' id ='email' name='email' value = { this.state.email} onChange= {this.handleChange}/>
                     <br/>
                     <br/>
+                    </div>
 
+                    <div className="form-group">
                     <label htmlFor= 'phone'>Contact Number</label>   
                     <input type ='number' id ='phone' name='phone' value = { this.state.phone} onChange= {this.handleChange}/>
                     <br/>
                     <br/>
+                    </div>
 
                     <label htmlFor= 'jobTitle'>Applying for job</label>   
                     <select  id ='jobTitle' name = 'jobTitle' value={this.state.jobTitle} onChange={this.handleChange}>
@@ -82,6 +90,7 @@ class JobApplication extends React.Component{
 
                     <input type ='submit' value='Send Application' />
                  </form>
+                </div>
                 </div>
         )
     }

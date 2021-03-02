@@ -109,13 +109,7 @@ class FullStack extends React.Component{
                                   {(ele.status== "shortlisted") && <button onClick ={this.handleShortlisted}>Shortlist</button>}
                                   {(ele.status== "rejected") && <button onClick ={this.handleRejected}>Reject</button>}
 
-
                                    </td>
-
-
-
-
-
                             </tr>
                        )
                    }) 

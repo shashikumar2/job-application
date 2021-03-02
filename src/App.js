@@ -5,7 +5,7 @@ import Nodejs from './Nodejs'
 import MeanStack from './MeanStack'
 import FullStack from './FullStack'
 
-
+import 'bootstrap/dist/css/bootstrap.css'
 
 function App(props){
     return (
@@ -18,15 +18,11 @@ function App(props){
              <Link to='/mean-stact'> MEAN Stack Developer</Link>-
              <Link to='/full-stack'> Full Stack Developer</Link>
 
-
-
              {/* <Route path='/'      component = {Dashboard} exact={true} /> */}
              <Route path='/front-end' component = {FrontEnd} />
              <Route path='/nodejs' component = {Nodejs} />
              <Route path='/mean-stact'  component = {MeanStack}  />
              <Route path='/full-stack'  component = {FullStack} />
-
-             
 
          </div>
         </BrowserRouter>

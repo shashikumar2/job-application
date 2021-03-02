@@ -111,11 +111,6 @@ class MeanStack extends React.Component{
 
 
                                    </td>
-
-
-
-
-
                             </tr>
                        )
                    }) 
