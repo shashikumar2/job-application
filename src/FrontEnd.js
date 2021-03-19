@@ -8,6 +8,7 @@ class FrontEnd extends React.Component{
             frontEndDevelopers : []
         }
     }
+
     componentDidMount(){
         axios.get('http://dct-application-form.herokuapp.com/users/application-forms')
         .then(response=>{
@@ -44,7 +45,6 @@ class FrontEnd extends React.Component{
         })
         .catch((err) =>{
             console.log(err)
-
         })
     }
 
@@ -62,8 +62,6 @@ class FrontEnd extends React.Component{
 
         })
     }
-
-      
 
     render(){
     return (
@@ -106,23 +104,19 @@ class FrontEnd extends React.Component{
                                       }} className="btn btn-danger">Reject</button>
                                     </div>
 			                       }
-
                                   {(ele.status== "shortlisted") && <button onClick ={this.handleShortlisted}>Shortlist</button>}
                                   {(ele.status== "rejected") && <button onClick ={this.handleRejected}>Reject</button>}
 
-
-                                   </td>
-
+                                </td>
                             </tr>
                        )
                    }) 
                 }
             </tbody>
         </table>
-      </div>
-      
-      
+      </div>      
   )
  }
 }
+
 export default FrontEnd

@@ -1,7 +1,6 @@
 import React from 'react'
 import axios from 'axios'
 
-
 class Nodejs extends React.Component{
     constructor() {
         super()
@@ -9,6 +8,7 @@ class Nodejs extends React.Component{
             nodejsDevelopers : []
         }
     }
+    
     componentDidMount(){
         axios.get('http://dct-application-form.herokuapp.com/users/application-forms')
         .then(response=>{
@@ -106,23 +106,16 @@ class Nodejs extends React.Component{
 			                       }
                                   {(ele.status== "shortlisted") && <button onClick ={this.handleShortlisted}>Shortlist</button>}
                                   {(ele.status== "rejected") && <button onClick ={this.handleRejected}>Reject</button>}
-
-
                                    </td>
-
-
-
-
                             </tr>
                        )
                    }) 
                 }
             </tbody>
         </table>
-      </div>
-      
-      
+      </div>      
   )
  }
 }
+
 export default Nodejs

@@ -116,9 +116,7 @@ class FullStack extends React.Component{
                 }
             </tbody>
         </table>
-        </div>
-        
-        
+        </div>        
     )
    }
 }

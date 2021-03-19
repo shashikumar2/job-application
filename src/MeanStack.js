@@ -1,7 +1,6 @@
 import React from 'react'
 import axios from 'axios'
 
-
 class MeanStack extends React.Component{
     constructor() {
         super()
@@ -46,7 +45,6 @@ class MeanStack extends React.Component{
         })
         .catch((err) =>{
             console.log(err)
-
         })
     }
 
@@ -78,8 +76,7 @@ class MeanStack extends React.Component{
                     <th> Experience</th>
                     <th> Applied Date</th>
                     <th> View Details</th>
-                    <th> Update Application Status</th>
-  
+                    <th> Update Application Status</th>  
                 </tr>
             </thead>
 
@@ -108,8 +105,6 @@ class MeanStack extends React.Component{
 			                       }
                                   {(ele.status== "shortlisted") && <button onClick ={this.handleShortlisted}>Shortlist</button>}
                                   {(ele.status== "rejected") && <button onClick ={this.handleRejected}>Reject</button>}
-
-
                                    </td>
                             </tr>
                        )
@@ -117,9 +112,7 @@ class MeanStack extends React.Component{
                 }
             </tbody>
         </table>
-      </div>
-      
-      
+      </div>      
   )
  }
 }

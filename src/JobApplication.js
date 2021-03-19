@@ -36,7 +36,6 @@ class JobApplication extends React.Component{
      })
 
     }
-
     
     render(){
         return (
@@ -74,7 +73,7 @@ class JobApplication extends React.Component{
                         <option value='MEAN Stack Developer'>MEAN Stack Developer </option>
                         <option value='FULL Stack Developer'>FULL Stack Developer </option>
   
-                        </select>
+                    </select>
                      <br/>
                      <br/>
 
