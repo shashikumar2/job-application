@@ -21,6 +21,7 @@ class Nodejs extends React.Component{
             console.log(err)
         })
     }
+
     handleDetails = (object) => {
         window.alert(`${object.name} Profile
 -------------------------------------------------
@@ -76,11 +77,9 @@ class Nodejs extends React.Component{
                     <th> Experience</th>
                     <th> Applied Date</th>
                     <th> View Details</th>
-                    <th> Update Application Status</th>
-  
+                    <th> Update Application Status</th>  
                 </tr>
             </thead>
-
             <tbody>
                 {
                    this.state.nodejsDevelopers.map((ele,i) =>{
